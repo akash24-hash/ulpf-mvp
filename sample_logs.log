@@ -1,0 +1,100 @@
+Sep 29 08:00:01 webserver01 systemd[1]: Started Web Server Daemon.
+2026-09-29T08:00:02.100Z INFO Starting initialization of API services.
+2026-09-29T08:00:03.450Z INFO Connected to primary database successfully.
+Sep 29 08:00:05 webserver01 sshd[952]: Server listening on 0.0.0.0 port 22.
+10.0.0.1 - - [29/Sep/2026:08:05:12 +0000] "GET / HTTP/1.1" 200 543 "-" "Mozilla/5.0"
+10.0.0.2 - - [29/Sep/2026:08:05:15 +0000] "GET /index.html HTTP/1.1" 200 1256 "-" "Chrome/91.0"
+10.0.0.5 - - [29/Sep/2026:08:06:01 +0000] "GET /dashboard HTTP/1.1" 200 3421 "-" "Safari/14.0"
+2026-09-29T08:06:02.000Z INFO User 10.0.0.5 accessed dashboard payload.
+10.0.1.10 - - [29/Sep/2026:08:07:22 +0000] "GET /api/status HTTP/1.1" 200 45 "-" "curl/7.68.0"
+Sep 29 08:08:14 webserver01 sshd[1024]: Accepted publickey for user admin from 10.0.1.20 port 54322 ssh2
+2026-09-29T08:10:00.000Z DEBUG Background sync task completed successfully.
+10.0.0.1 - - [29/Sep/2026:08:12:44 +0000] "GET /assets/logo.png HTTP/1.1" 200 8922 "-" "Mozilla/5.0"
+10.0.0.1 - - [29/Sep/2026:08:12:45 +0000] "GET /assets/style.css HTTP/1.1" 200 2133 "-" "Mozilla/5.0"
+10.0.0.2 - - [29/Sep/2026:08:15:30 +0000] "GET /api/data HTTP/1.1" 200 1024 "-" "Chrome/91.0"
+2026-09-29T08:16:10.123Z WARN High memory usage detected, attempting GC.
+10.0.1.20 - - [29/Sep/2026:08:18:05 +0000] "GET /dashboard HTTP/1.1" 200 3421 "-" "Firefox/89.0"
+192.168.1.50 - - [29/Sep/2026:08:20:01 +0000] "POST /login HTTP/1.1" 401 512 "-" "Python-urllib"
+Sep 29 08:20:02 webserver01 sshd[2048]: Failed password for root from 192.168.1.50 port 49321 ssh2
+2026-09-29T08:20:03.000Z ERROR Login failed for user admin from 192.168.1.50
+192.168.1.50 - - [29/Sep/2026:08:20:04 +0000] "POST /login HTTP/1.1" 401 512 "-" "Python-urllib"
+Sep 29 08:20:05 webserver01 sshd[2049]: Failed password for root from 192.168.1.50 port 49325 ssh2
+2026-09-29T08:20:06.000Z ERROR Authentication failure from IP 192.168.1.50
+192.168.1.50 - - [29/Sep/2026:08:20:07 +0000] "POST /login HTTP/1.1" 401 512 "-" "Python-urllib"
+Sep 29 08:20:08 webserver01 sshd[2050]: Failed password for admin from 192.168.1.50 port 49330 ssh2
+192.168.1.50 - - [29/Sep/2026:08:20:09 +0000] "POST /login HTTP/1.1" 401 512 "-" "Python-urllib"
+2026-09-29T08:20:10.000Z ERROR Multiple failed login attempts from 192.168.1.50
+MALFORMED LOG ENTRY
+[ERROR] This log does not follow any standard regex pattern we defined.
+10.0.0.1 [29/Sep/2026] GET /index.html
+random text without timestamp or structure
+10.0.0.5 - - [29/Sep/2026:08:25:00 +0000] "GET /api/status HTTP/1.1" 200 45 "-" "Safari/14.0"
+Sep 29 08:25:05 webserver01 cron[3010]: (root) CMD ( /usr/local/bin/cleanup.sh >/dev/null 2>&1)
+2026-09-29T08:25:10.000Z INFO Cron job cleanup executed successfully.
+10.0.1.10 - - [29/Sep/2026:08:27:12 +0000] "GET /index.html HTTP/1.1" 200 1256 "-" "curl/7.68.0"
+10.0.1.10 - - [29/Sep/2026:08:27:15 +0000] "GET /dashboard HTTP/1.1" 200 3421 "-" "curl/7.68.0"
+192.168.1.77 - - [29/Sep/2026:08:30:01 +0000] "GET /admin HTTP/1.1" 403 256 "-" "Go-http-client/1.1"
+192.168.1.77 - - [29/Sep/2026:08:30:02 +0000] "GET /admin/config HTTP/1.1" 403 256 "-" "Go-http-client/1.1"
+192.168.1.77 - - [29/Sep/2026:08:30:03 +0000] "GET /admin/env HTTP/1.1" 403 256 "-" "Go-http-client/1.1"
+2026-09-29T08:30:05.100Z ERROR Unauthorized access attempt from 192.168.1.77 to restricted endpoint
+Sep 29 08:30:06 webserver01 app[4012]: failure during authorization for IP 192.168.1.77
+2026-09-29T08:30:07.000Z ERROR Token validation failed for request from 192.168.1.77
+10.0.1.10 - - [29/Sep/2026:08:27:12 +0000] "GET /index.html HTTP/1.1" 200 1256 "-" "curl/7.68.0"
+10.0.1.10 - - [29/Sep/2026:08:27:12 +0000] "GET /index.html HTTP/1.1" 200 1256 "-" "curl/7.68.0"
+10.0.1.10 - - [29/Sep/2026:08:27:15 +0000] "GET /dashboard HTTP/1.1" 200 3421 "-" "curl/7.68.0"
+2026-09-29T08:25:10.000Z INFO Cron job cleanup executed successfully.
+10.0.0.2 - - [29/Sep/2026:08:35:10 +0000] "GET / HTTP/1.1" 200 543 "-" "Chrome/91.0"
+10.0.0.2 - - [29/Sep/2026:08:35:11 +0000] "GET /assets/style.css HTTP/1.1" 200 2133 "-" "Chrome/91.0"
+10.0.0.2 - - [29/Sep/2026:08:35:12 +0000] "GET /assets/script.js HTTP/1.1" 200 4012 "-" "Chrome/91.0"
+2026-09-29 08:35:15 INFO Serving static assets for user session from 10.0.0.2
+Sep 29 08:36:00 webserver01 sshd[5010]: Accepted publickey for user dev from 10.0.0.5 port 55101 ssh2
+10.0.0.5 - - [29/Sep/2026:08:36:30 +0000] "GET /api/deploy HTTP/1.1" 200 128 "-" "PostmanRuntime/7.28"
+2026-09-29T08:36:31.000Z INFO Deployment triggered by dev user from 10.0.0.5
+Sep 29 08:36:32 webserver01 deploy_script[5022]: Starting deployment procedure...
+Sep 29 08:36:35 webserver01 deploy_script[5022]: Deployment completed successfully.
+2026-09-29T08:36:36.000Z INFO Cache invalidated after successful deployment.
+10.0.1.10 - - [29/Sep/2026:08:40:01 +0000] "GET / HTTP/1.1" 200 543 "-" "curl/7.68.0"
+10.0.1.20 - - [29/Sep/2026:08:41:15 +0000] "GET /about HTTP/1.1" 200 1024 "-" "Firefox/89.0"
+10.0.0.1 - - [29/Sep/2026:08:45:00 +0000] "GET /contact HTTP/1.1" 200 856 "-" "Mozilla/5.0"
+10.0.0.1 - - [29/Sep/2026:08:45:02 +0000] "POST /contact/submit HTTP/1.1" 200 128 "-" "Mozilla/5.0"
+2026-09-29T08:45:03.000Z INFO Contact form submitted from 10.0.0.1 successfully.
+Sep 29 08:50:00 webserver01 cron[6001]: (root) CMD ( /usr/sbin/logrotate /etc/logrotate.conf)
+2026-09-29T08:50:05.123Z DEBUG Log rotation triggered by system cron.
+2026-bad-format-error line missing severities
+10.0.0.2 - - [29/Sep/2026:08:55:00 +0000] "GET /dashboard HTTP/1.1" 200 3421 "-" "Chrome/91.0"
+10.0.0.2 - - [29/Sep/2026:08:55:01 +0000] "GET /api/data HTTP/1.1" 200 1024 "-" "Chrome/91.0"
+10.0.0.5 - - [29/Sep/2026:08:58:10 +0000] "GET / HTTP/1.1" 200 543 "-" "Safari/14.0"
+2026-09-29 09:00:00 WARN API rate limit approaching for IP 10.0.0.2
+10.0.0.2 - - [29/Sep/2026:09:00:05 +0000] "GET /api/data HTTP/1.1" 200 1024 "-" "Chrome/91.0"
+10.0.0.2 - - [29/Sep/2026:09:00:06 +0000] "GET /api/data HTTP/1.1" 200 1024 "-" "Chrome/91.0"
+10.0.0.2 - - [29/Sep/2026:09:00:07 +0000] "GET /api/data HTTP/1.1" 200 1024 "-" "Chrome/91.0"
+2026-09-29 09:00:08 WARN API rate limit approaching for IP 10.0.0.2
+10.0.1.10 - - [29/Sep/2026:09:05:00 +0000] "GET /dashboard HTTP/1.1" 200 3421 "-" "curl/7.68.0"
+10.0.1.10 - - [29/Sep/2026:09:05:01 +0000] "GET /api/status HTTP/1.1" 200 45 "-" "curl/7.68.0"
+Sep 29 09:10:00 webserver01 sshd[7000]: Connection closed by 10.0.1.20 port 54322
+Sep 29 09:15:00 webserver01 sshd[7050]: Accepted publickey for user admin from 10.0.1.20 port 54500 ssh2
+10.0.1.20 - - [29/Sep/2026:09:15:30 +0000] "GET /admin/dashboard HTTP/1.1" 200 5012 "-" "Firefox/89.0"
+2026-09-29T09:15:35.000Z INFO Admin session established for 10.0.1.20
+10.0.0.1 - - [29/Sep/2026:09:20:00 +0000] "GET / HTTP/1.1" 200 543 "-" "Mozilla/5.0"
+10.0.0.1 - - [29/Sep/2026:09:20:05 +0000] "GET /products HTTP/1.1" 200 8901 "-" "Mozilla/5.0"
+10.0.0.1 - - [29/Sep/2026:09:20:10 +0000] "GET /products/item/123 HTTP/1.1" 200 1204 "-" "Mozilla/5.0"
+2026-09-29 09:20:12 INFO Database query executed successfully for item 123
+10.0.0.5 - - [29/Sep/2026:09:25:00 +0000] "GET / HTTP/1.1" 200 543 "-" "Safari/14.0"
+10.0.0.5 - - [29/Sep/2026:09:25:02 +0000] "GET /contact HTTP/1.1" 200 856 "-" "Safari/14.0"
+Sep 29 09:30:00 webserver01 systemd[1]: Removed slice User Slice of root.
+2026-09-29T09:30:05.100Z DEBUG Background sync task completed successfully.
+2026-09-29 09:30:10 INFO Checking integrity of user database.
+2026-09-29 09:30:15 INFO Integrity check passed without issues.
+10.0.1.10 - - [29/Sep/2026:09:35:00 +0000] "GET / HTTP/1.1" 200 543 "-" "curl/7.68.0"
+10.0.1.10 - - [29/Sep/2026:09:35:05 +0000] "GET /api/status HTTP/1.1" 200 45 "-" "curl/7.68.0"
+10.0.0.2 - - [29/Sep/2026:09:40:00 +0000] "GET /dashboard HTTP/1.1" 200 3421 "-" "Chrome/91.0"
+10.0.0.2 - - [29/Sep/2026:09:40:02 +0000] "GET /assets/style.css HTTP/1.1" 200 2133 "-" "Chrome/91.0"
+10.0.0.2 - - [29/Sep/2026:09:40:04 +0000] "GET /assets/script.js HTTP/1.1" 200 4012 "-" "Chrome/91.0"
+10.0.0.2 - - [29/Sep/2026:09:40:04 +0000] "GET /assets/script.js HTTP/1.1" 200 4012 "-" "Chrome/91.0"
+2026-09-29T09:45:00.000Z INFO Generating daily summary report.
+Sep 29 09:45:05 webserver01 report_gen[8012]: Summary report successfully generated.
+10.0.1.20 - - [29/Sep/2026:09:50:00 +0000] "GET /admin/reports HTTP/1.1" 200 5120 "-" "Firefox/89.0"
+10.0.1.20 - - [29/Sep/2026:09:50:05 +0000] "GET /admin/reports/download HTTP/1.1" 200 15400 "-" "Firefox/89.0"
+2026-09-29T09:50:10.000Z INFO Admin 10.0.1.20 downloaded daily summary report.
+Sep 29 09:55:00 webserver01 cron[9001]: (root) CMD ( /usr/local/bin/sync.sh )
+2026-09-29 09:55:05 INFO Sync job finished.

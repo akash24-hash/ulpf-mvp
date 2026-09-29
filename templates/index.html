@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULPF - SIH26156 MVP</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Universal Log Preprocessing Framework (MVP)</h1>
+        <div class="upload-section">
+            <input type="file" id="logFile" accept=".log,.txt">
+            <button onclick="uploadFile()">Process Logs</button>
+            <button onclick="window.location.href='/export'" id="exportBtn" disabled>Export JSONL</button>
+        </div>
+    </header>
+
+    <div class="dashboard" id="dashboard" style="display: none;">
+        <div class="stats-grid">
+            <div class="stat-card"><h3>Total Records</h3><p id="s-total">0</p></div>
+            <div class="stat-card"><h3>Parsed (OK)</h3><p id="s-parsed">0</p></div>
+            <div class="stat-card"><h3>Unmapped</h3><p id="s-unmapped">0</p></div>
+            <div class="stat-card"><h3>Duplicates Filtered</h3><p id="s-dupes">0</p></div>
+            <div class="stat-card"><h3>Unique IPs</h3><p id="s-ips">0</p></div>
+            <div class="stat-card anomaly"><h3>Anomalies Detected</h3><p id="s-anomalies">0</p></div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-container"><canvas id="timeChart"></canvas></div>
+            <div class="chart-container"><canvas id="ipChart"></canvas></div>
+            <div class="chart-container"><canvas id="statusChart"></canvas></div>
+        </div>
+
+        <div class="table-container">
+            <h2>Normalized Events</h2>
+            <table id="eventsTable">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Source Type</th>
+                        <th>Src IP</th>
+                        <th>Severity</th>
+                        <th>Action</th>
+                        <th>Event Template</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
